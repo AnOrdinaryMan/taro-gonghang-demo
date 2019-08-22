@@ -118,21 +118,22 @@ export default class BaseInfo extends Component {
     }
 
     handleConfirmClick = () => {
-        if (this.state.baseInfo.name != '' && this.state.baseInfo.idCard != '' && this.state.baseInfo.phone != '' && this.state.baseInfo.verifyCode != '') {
-            if (this.state.checked) {
-                this.postBaseInfo();
-            } else {
-                Taro.showToast({
-                    title: '请阅读并同意《申请人说明》',
-                    icon: 'none'
-                })
-            }
-        } else {
-            Taro.showToast({
-                title: '信息未填写完整',
-                icon: 'none'
-            })
-        }
+        this.postBaseInfo();
+        // if (this.state.baseInfo.name != '' && this.state.baseInfo.idCard != '' && this.state.baseInfo.phone != '' && this.state.baseInfo.verifyCode != '') {
+        //     if (this.state.checked) {
+        //         this.postBaseInfo();
+        //     } else {
+        //         Taro.showToast({
+        //             title: '请阅读并同意《申请人说明》',
+        //             icon: 'none'
+        //         })
+        //     }
+        // } else {
+        //     Taro.showToast({
+        //         title: '信息未填写完整',
+        //         icon: 'none'
+        //     })
+        // }
     }
 
     onNameInput = (e) => {

@@ -19,8 +19,8 @@ export default class Again extends Component {
             selected: 0
         },
 
-        companyAddress: '广东省广州市',
-        houseAddress: '广东省汕头市'
+        companyAddress: '北京市北京市东城区',
+        houseAddress: '北京市北京市东城区'
     }
 
     getName () {
@@ -92,8 +92,8 @@ export default class Again extends Component {
 
     componentWillMount () { 
         this.getName();
-        this.getHouseAddress();
-        this.getCompanyAddress();
+        // this.getHouseAddress();
+        // this.getCompanyAddress();
     }
 
     goToDetail = () => {
@@ -149,8 +149,8 @@ export default class Again extends Component {
                     <View className='again-tip-name'>
                         <Text className='again-tip-view-txt'>尊敬的 {this.state.name} { this.state.sex == '男' ? '先生' : '女士'}</Text>
                     </View>
-                    <View className='again-tip'>
-                        <Text className='again-tip-view-txt'>您仅需选择以下信息即可完成办卡申请，申请信息将使用您近一年半内最近一次在我行申请办卡的信息，若您希望更新申请信息，可 <Text className='again-tip-blue' onClick={this.goToDetail}>填写完整信息</Text> 并重新办理。</Text>
+                    <View className='again-tip' onClick={this.goToDetail}>
+                        <Text className='again-tip-view-txt'>您仅需选择以下信息即可完成办卡申请，申请信息将使用您近一年半内最近一次在我行申请办卡的信息，若您希望更新申请信息，可 <Text className='again-tip-blue'>填写完整信息</Text> 并重新办理。</Text>
                     </View>
                 </View>
 

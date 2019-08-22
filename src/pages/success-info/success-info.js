@@ -13,7 +13,7 @@ export default class SuccessInfo extends Component {
     state = {
         applyId: '36022019190400961',
         cardTitle: '故宫·九有一心红白金',
-        mailAddress: '广东省广州市**'
+        mailAddress: '北京市北京市东城区'
     }
 
     componentWillMount () { 
@@ -37,7 +37,7 @@ export default class SuccessInfo extends Component {
                 this.setState({
                     applyId: res.applyId,
                     cardTitle: res.cardTitle,
-                    mailAddress: mailAddress
+                    // mailAddress: mailAddress
                 })
             })
         }

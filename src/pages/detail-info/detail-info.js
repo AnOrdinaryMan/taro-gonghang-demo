@@ -34,7 +34,7 @@ export default class DetailInfo extends Component {
         this.userIdCard = this.$router.params.userIdCard
 
         this.state = {
-            userSpell: '',
+            userSpell: 'CHEN MOU',
 
             idCard: {
                 name: 'idCard',
@@ -538,19 +538,19 @@ export default class DetailInfo extends Component {
 
 
     finishAll () {
-        let infoArray = ['idCard', 'mariage', 'education', 'house', 'job', 'houseAddress',
-            'companyCharacter','level', 'companyName', 'companyAddress', 'companyPhone', 
-            'income', 'contactsName', 'contactsPhone', 'relationship', 'postalAddress'];
-        for (let i = 0; i < infoArray.length; i++) {
-            if (!this.state[infoArray[i]].finished) {
-                return false;
-            }
-        }
-        if (this.state.idCard.selected == 0) {
-            if (!this.state.dueDate.finished) {
-                return false;
-            }
-        }
+        // let infoArray = ['idCard', 'mariage', 'education', 'house', 'job', 'houseAddress',
+        //     'companyCharacter','level', 'companyName', 'companyAddress', 'companyPhone', 
+        //     'income', 'contactsName', 'contactsPhone', 'relationship', 'postalAddress'];
+        // for (let i = 0; i < infoArray.length; i++) {
+        //     if (!this.state[infoArray[i]].finished) {
+        //         return false;
+        //     }
+        // }
+        // if (this.state.idCard.selected == 0) {
+        //     if (!this.state.dueDate.finished) {
+        //         return false;
+        //     }
+        // }
         return true;
     }
     // 提交申请
